@@ -1,10 +1,15 @@
+import MainPanel from "./componets/MainPanel";
+
 
 function App() {
   return (
     <div className="App">
-      Hello world
+      <MainPanel/>
     </div>
   );
 }
+
+
+
 
 export default App;

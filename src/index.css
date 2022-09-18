@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App{ 
+background-color: #e5e5f7;
+opacity: 0.8;
+background-image: radial-gradient( ellipse farthest-corner at 10px 10px , #444cf7, #444cf7 50%, #e5e5f7 50%);
+background-size: 10px 10px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-panel{ 
+  background: grey;
+  width: 70%;
+  min-height: 60vh;
+  border-radius:30px;
+  border: 10px solid black;
+}
