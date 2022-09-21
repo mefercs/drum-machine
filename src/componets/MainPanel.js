@@ -7,14 +7,14 @@ import Word from './Word'
 const MainPanel = () =>{ 
 
   const [volume, setVolume] = useState(1)
-  const [word, setWord] = useState("")
+  const [word, setWord] = useState(". . .")
 
   return <div className="main-panel">
     <div className="volume-word">
       <VolumenSlider setVolume={setVolume}/>
-      <Word/>
+      <Word word={word}/>
     </div>
-    <Buttons volume={volume}/>
+    <Buttons volume={volume} setWord={setWord}/>
 
   </div>
 }

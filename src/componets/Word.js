@@ -2,7 +2,7 @@
 
 const Word = (props) =>{ 
   return <div className="word">
-    here is the word
+    <h4>{props.word}</h4>
   </div>
 }
 

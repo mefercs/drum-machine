@@ -32,28 +32,20 @@ const Buttons = (props) =>{
     sound.play()
   }
 
-  // const handleKeyPress = e =>{ 
-  //   let key = e.key;
-  //   switch (key) {
-  //     case 'a': console.log(e.key);  break;
-  //     case 'b': console.log(e.key);  break;
-  //     case 'c': console.log(e.key);  break;
-  //     case 'd': console.log(e.key);  break;
-  //     case 'e': console.log(e.key);  break;
-  //     case 'f': console.log(e.key);  break;
-  //     case 'g': console.log(e.key);  break;
-  //     case 'h': console.log(e.key);  break;
-  //     case 'i': console.log(e.key);  break;
-  //     default:
-  //       console.log("Press a correct letter");
-  //       break;
-  //   }
-  // }
+  const handleKeyPress = (e) =>{ 
+    let key = e.key;
+    key = String(key).toUpperCase()
+    const audioClip = audioClips.filter(e => e.label===String(key).toUpperCase())
+    if( audioClip[0] ){
+      SoundPlay( audioClip[0].sound )
+      props.setWord(key)
+    }
+   }
   
   
   const RenderButtonAndSound = ()=> {
     return audioClips.map( (soundObj, index) =>{ 
-      return ( <button className='button-sound' key={index} onClick={() => SoundPlay(soundObj.sound)}>
+      return ( <button className='button-sound' key={index} onKeyDown={(e) => handleKeyPress(e) } onClick={() => {SoundPlay(soundObj.sound); props.setWord(soundObj.label)}}> 
         {soundObj.label}
       </button> )
     } )

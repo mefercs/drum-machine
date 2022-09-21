@@ -51,6 +51,7 @@ background-size: 10px 10px;
   color: white; 
   font-weight: bold;
   margin: 5px;
+  width: 100px;
 }
 
 .volume-slider{
