@@ -31,6 +31,28 @@ background-size: 10px 10px;
   border-radius:30px;
   border: 10px solid black;
 }
+.volume-word{
+  width: 90%;
+  display: flex;
+  background: #5A5b5c;
+  justify-content: space-around;
+  border-radius: 20px;
+  margin: 10px auto;
+  padding:5px;
+  border: 5px solid black;
+}
+.word{
+  background: #3A3b3c;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: white; 
+  font-weight: bold;
+  margin: 5px;
+}
+
 .volume-slider{
   display: flex;
   flex-direction: column;
@@ -60,6 +82,7 @@ background-size: 10px 10px;
   grid-gap: 20px;
   border-radius:10px ;
   justify-items: center;
+  border: 5px solid black;
 }
 .button-sound{
   background-color:white ;
