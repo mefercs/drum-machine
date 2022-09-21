@@ -1,12 +1,11 @@
 import {useState} from 'react'
 
-function VolumenSlider() {
+function VolumenSlider(props) {
   const [volume, setVolume] = useState(1)
-  const [muted, setMuted] = useState(false)
-  const finalVolume = muted ? 0 : volume ** 2
+  const finalVolume = volume
 
   return (
-    <main>
+    <div className='volume-slider'>
       <section>
         <input
           type="range"
@@ -16,16 +15,15 @@ function VolumenSlider() {
           value={volume}
           onChange={event => {
             setVolume(event.target.valueAsNumber)
+            props.setVolume( volume )
+            console.log(volume);
           }}
         />
-        <button onClick={() => setMuted(m => !m)}>
-          {muted ? "muted" : "unmuted"}
-        </button>
       </section>
       <section>
-        <p>final volume: {finalVolume.toFixed(3)}</p>
+        <p>Volume: {finalVolume.toFixed(2)}</p>
       </section>
-    </main>
+    </div>
   )
 }
 

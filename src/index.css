@@ -31,3 +31,50 @@ background-size: 10px 10px;
   border-radius:30px;
   border: 10px solid black;
 }
+.volume-slider{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #3A3b3c;
+  width: 200px;
+  border-radius: 20px;
+  color : white;
+  padding: 10px;
+  margin: 5px;
+  font-weight: bold;
+}
+.volume-slider>section>button{
+  border: None;
+  border-radius: 5px;
+  padding: 5px 9px;
+  background:teal;
+  color: white;
+  font-weight: bold;
+}
+.buttons{
+  margin: 20px;
+  padding: 20px;
+  background: #3a3b3c;
+  display: grid;
+  grid-template: repeat(3, 1fr)/repeat(3,1fr);
+  grid-gap: 20px;
+  border-radius:10px ;
+  justify-items: center;
+}
+.button-sound{
+  background-color:white ;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  box-shadow: 5px 5px 0 0 black;
+  border:None;
+  width: 90%;
+}
+.button-sound:hover{
+  background: grey;
+}
+.button-sound:active{
+  background: teal;
+}

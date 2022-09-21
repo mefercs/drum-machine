@@ -1,9 +1,17 @@
 import VolumenSlider from "./VolumeSlider";
 import {useState} from 'react'
+import Buttons from './Buttons'
+
+
+
 const MainPanel = () =>{ 
-  const [volumen, setVolume] = useState(0)
+
+  const [volume, setVolume] = useState(1)
+
   return <div className="main-panel">
-    <VolumenSlider/>
+    <VolumenSlider setVolume={setVolume}/>
+    <Buttons volume={volume}/>
+
   </div>
 }
 
